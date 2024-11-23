@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#6200EE</color> <!-- Ejemplo de color morado -->
+    <color name="secondary">#03DAC5</color> <!-- Ejemplo de color turquesa -->
+    <color name="gray">#BDBDBD</color> <!-- Un color gris claro -->
+    <color name="light_blue">#B3E5FC</color> <!-- Azul claro -->
+
+</resources>

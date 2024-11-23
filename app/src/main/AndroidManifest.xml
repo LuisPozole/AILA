@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+
 
     <application
         android:allowBackup="true"
@@ -14,22 +16,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aila"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ReminderActivity"
+            android:exported="false" />
         <!-- SplashActivity como actividad principal con el tema SplashTheme -->
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Otras actividades -->
-        <activity
-            android:name=".DisplayActivity"
-            android:exported="false" />
+        </activity> <!-- Otras actividades -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />

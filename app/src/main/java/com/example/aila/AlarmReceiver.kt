@@ -9,10 +9,9 @@ import androidx.core.app.NotificationCompat
 
 class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        val title = intent.getStringExtra("EXTRA_TITLE")
-        val description = intent.getStringExtra("EXTRA_DESCRIPTION")
+        val title = intent.getStringExtra("EXTRA_TITLE") ?: "Recordatorio"
+        val description = intent.getStringExtra("EXTRA_DESCRIPTION") ?: "Tienes una notificación pendiente"
 
-        // Crear el canal de notificación (para Android 8.0+)
         val channelId = "reminder_channel"
         val notificationManager =
             context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -25,7 +24,6 @@ class AlarmReceiver : BroadcastReceiver() {
             notificationManager.createNotificationChannel(channel)
         }
 
-        // Construir la notificación
         val notification = NotificationCompat.Builder(context, channelId)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setContentTitle(title)
@@ -34,7 +32,7 @@ class AlarmReceiver : BroadcastReceiver() {
             .setAutoCancel(true)
             .build()
 
-        // Mostrar la notificación
-        notificationManager.notify(0, notification)
+        val notificationId = System.currentTimeMillis().toInt()
+        notificationManager.notify(notificationId, notification)
     }
 }

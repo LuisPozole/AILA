@@ -30,6 +30,24 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <Button
+                android:id="@+id/btnSelectDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar días específicos"
+                android:backgroundTint="@color/primary"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp"
+                android:visibility="gone" />
+
+
+
+            <Spinner
+                android:id="@+id/spinnerFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/frequency_options" />
+
             <!-- Imagen del logo -->
             <ImageView
                 android:id="@+id/logo"

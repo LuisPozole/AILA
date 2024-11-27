@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Aila</string>
     <string name="logo_description">Logo de la aplicación</string>
+    <string-array name="frequency_options">
+        <item>Diario</item>
+        <item>Seleccionar días específicos</item>
+    </string-array>
 </resources>

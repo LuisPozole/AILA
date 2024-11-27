@@ -7,6 +7,7 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aila.MainActivity
+
 import com.example.aila.R
 
 class SplashActivity : AppCompatActivity() {

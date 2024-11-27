@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título de la nota"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etNoteInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe tu nota aquí"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:gravity="top"
+        android:background="@android:drawable/edit_text" />
+
+    <Button
+        android:id="@+id/btnRecordNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dictar nota" />
+
+    <Button
+        android:id="@+id/btnSaveNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar nota"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnDeleteAllNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar todas las notas"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notas guardadas:"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <ListView
+        android:id="@+id/lvNotes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+</LinearLayout>

@@ -5,4 +5,10 @@
         <item>Diario</item>
         <item>Seleccionar días específicos</item>
     </string-array>
+        <string name="reminders">Recordatorios</string>
+        <string name="search">Búsqueda</string>
+        <string name="notes">Notas</string>
+        <string name="alarms">Alarmas</string>
+        <string name="calendar">Calendario</string>
+
 </resources>

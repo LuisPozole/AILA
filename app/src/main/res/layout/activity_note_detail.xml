@@ -2,19 +2,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@android:color/white">
 
     <TextView
         android:id="@+id/tvNoteTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp" />
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Note Title" />
 
     <TextView
         android:id="@+id/tvNoteContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="Note content goes here. It can span multiple lines depending on the content." />
+
 </LinearLayout>

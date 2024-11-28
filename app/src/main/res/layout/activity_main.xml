@@ -1,50 +1,89 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
-    android:background="@color/white">
+    android:background="@color/light_blue">
 
-    <TextView
-        android:id="@+id/textViewGreeting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="@color/black"
-        android:layout_marginBottom="32dp" />
-
-    <Button
-        android:id="@+id/btnReminders"
+    <!-- CardView para el contenido principal -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recordatorio" />
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white">
 
-    <Button
-        android:id="@+id/btnSearch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Búsqueda"
-        android:layout_marginTop="16dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/btnNotes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Notas"
-        android:layout_marginTop="16dp" />
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="@string/logo_description"
+                android:src="@drawable/aila" />
 
-    <Button
-        android:id="@+id/btnAlarms"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Alarmas"
-        android:layout_marginTop="16dp" />
+            <!-- Título o saludo -->
+            <TextView
+                android:id="@+id/textViewGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¡Bienvenido!"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"/>
 
-    <Button
-        android:id="@+id/btnCalendar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calendario"
-        android:layout_marginTop="16dp" />
+            <!-- Botones con diseño más atractivo -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReminders"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recordatorios"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSearch"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Búsqueda"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNotes"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notas"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAlarms"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alarmas"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalendar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calendario" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 </LinearLayout>

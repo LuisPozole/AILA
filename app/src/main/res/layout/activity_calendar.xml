@@ -6,11 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".CalendarActivity">
 
+
+
+    <!-- Línea guía para mantener espaciado proporcional -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="72dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btnAddEvent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +33,9 @@
         android:contentDescription="Agregar evento"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:elevation="6dp"
+    app:rippleColor="?attr/colorControlHighlight"
+    android:layout_marginBottom="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

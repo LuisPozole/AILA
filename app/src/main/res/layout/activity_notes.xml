@@ -3,15 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="?android:attr/windowBackground"
+    android:weightSum="1">
 
+    <!-- Título de la nota -->
     <EditText
         android:id="@+id/etNoteTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Título de la nota"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp" />
 
+    <!-- Contenido de la nota -->
     <EditText
         android:id="@+id/etNoteInput"
         android:layout_width="match_parent"
@@ -19,40 +29,66 @@
         android:hint="Escribe tu nota aquí"
         android:inputType="textMultiLine"
         android:lines="4"
-        android:gravity="top"
-        android:background="@android:drawable/edit_text" />
+        android:gravity="top|start"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/btnRecordNote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dictar nota" />
+        android:text="Dictar nota"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/btnSaveNote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Guardar nota"
-        android:layout_marginTop="8dp" />
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/btnDeleteAllNotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Eliminar todas las notas"
-        android:layout_marginTop="8dp" />
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
 
+
+    <!-- Título para las notas guardadas -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Notas guardadas:"
         android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
 
+    <!-- Lista de notas guardadas -->
     <ListView
         android:id="@+id/lvNotes"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp" />
+        android:dividerHeight="1dp"
+        android:background="?android:attr/windowBackground"
+        android:padding="8dp" />
 </LinearLayout>

@@ -6,5 +6,7 @@
     <color name="secondary">#03DAC5</color> <!-- Ejemplo de color turquesa -->
     <color name="gray">#BDBDBD</color> <!-- Un color gris claro -->
     <color name="light_blue">#B3E5FC</color> <!-- Azul claro -->
+    <color name="light_gray">#F5F5F5</color> <!-- Fondo general -->
+    <color name="dark_gray">#757575</color> <!-- Texto y bordes -->
 
 </resources>
